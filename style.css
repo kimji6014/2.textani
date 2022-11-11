@@ -1,0 +1,87 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Poppins:wght@800&family=Yeon+Sung&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222;
+}
+
+.section {
+    widows: 100%
+        /* (=100vh) */
+    ;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.section .scroll {
+    display: flex;
+    /* 내 자식을 옆으로 정렬함 */
+    position: absolute;
+    left: 95px;
+    top: 0;
+    transform: rotate(90deg);
+    transform-origin: left top;
+}
+
+.section .scroll div {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 64px;
+    white-space: nowrap;
+    /* 글자를 아래로 떨어지게 하지 않음 */
+    font-weight: 800;
+    animation: animate1 40s linear infinite;
+}
+
+.section .scroll div:nth-child(2) {
+    /* div중 둘째 */
+    animation: animate2 40s linear infinite;
+    animation-delay: -20s;
+}
+
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+
+}
+
+/* .section2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.section2 .rotate {
+    background-color: red;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: rotate(0deg);
+    transform-origin: left top;
+} */
